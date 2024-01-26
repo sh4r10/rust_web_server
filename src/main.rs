@@ -9,7 +9,7 @@ use std::{
 use web_server::ThreadPool;
 
 fn main() {
-    let listener = TcpListener::bind("127.0.0.1:4000").unwrap();
+    let listener = TcpListener::bind("0.0.0.0:4000").unwrap();
     let pool = ThreadPool::new(8);
 
     for stream in listener.incoming() {
